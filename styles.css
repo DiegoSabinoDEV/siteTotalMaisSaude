@@ -29,6 +29,12 @@ header {
     height: 40px;
 }
 
+/*.text-justify{
+  
+    
+   
+}*/
+
 /* Seção Hero */
 .hero {
     padding: 10px 0; /* Ajuste o valor para controlar a altura */
@@ -56,16 +62,17 @@ header {
 
 /* Estilo dos benefícios */
 .beneficios-content .card {
-    background-color: var(--color-secondary) !important; /* Fundo amarelo */
-    color: var(--color-primary) !important; /* Cor do texto */
+    background-color: var(--color-secondary) !important;
+    color: var(--color-primary) !important;
     border: 1px solid var(--color-primary) !important;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Sombra */
-    min-height: 250px; /* Tamanho fixo */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3) !important; /* Aumenta a sombra */
+    min-height: 250px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
+
 
 /* Estilo para as imagens dos cartões */
 .beneficios-content .card-img-top {
@@ -116,7 +123,26 @@ footer {
     padding: 20px;
 }
 
-/* Centralizando o botão "Peça o seu" abaixo das seções */
-.beneficios .text-center {
-    margin-top: 20px;
+/* Ajustes de layout para versões mobile */
+@media (max-width: 576px) {
+    /* Ajusta o espaçamento do texto na versão mobile */
+    .beneficios-content .card p {
+        margin: 10px 5px; /* Ajusta o espaçamento interno do texto */
+        font-size: 0.9em; /* Diminui levemente o tamanho do texto, se necessário */
+    }
+
+    /* Ajusta o padding dos títulos na versão mobile */
+    .hero, .vantagens, .rede-credenciada {
+        padding: 20px 0; /* Reduz o padding vertical na versão mobile */
+    }
+
+    /* Ajusta o espaçamento dos elementos de texto */
+    .section-title h2, .beneficios-content .card h5 {
+        margin-bottom: 5px; /* Reduz o espaçamento abaixo dos títulos */
+    }
+
+    /* Ajusta o espaçamento das imagens nos cartões */
+    .beneficios-content .card-img-top {
+        margin-bottom: 5px;
+    }
 }
