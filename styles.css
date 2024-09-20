@@ -1,148 +1,163 @@
-/* Cores personalizadas */
+/* ================================
+   Cores Personalizadas
+================================ */
 :root {
     --color-primary: #06546f;
-    --color-secondary: #f1e511;
-    --color-white: #ffffff;
+    --color-secondary: #EAE932;
+    --color-white: #f9f9f9;
+    --color-text: #333333;
+
 }
 
-/* Estilo geral */
+/* ================================
+   Estilo Geral
+================================ */
 body {
     background-color: var(--color-white);
-    font-family: 'Poppins', 'Arial', sans-serif;
-    padding-top: 100px; /* Ajuste o valor conforme a altura do cabeçalho */
+    font-family: 'Poppins', Arial, sans-serif;
+    padding-top: 100px; /* Ajuste conforme a altura do cabeçalho */
 }
 
-/* Cabeçalho */
+/* ================================
+   Cabeçalho
+================================ */
 header {
-    background-color: var(--color-primary) !important; /* Sobrescrevendo Bootstrap */
-    color: var(--color-white) !important;
+    background-color: var(--color-primary) ;
+    color: var(--color-white) ;
 }
 
 .logo {
-    height: 60px;
-    max-width: 180px; /* Aumenta o tamanho da logo para maior legibilidade */
+    max-width: 200px;/* Verificar o melhor tamanho ao finalizar projeto */
     height: auto;
     
 }
 
-.btn-img img {
-    height: 40px;
+.btnPeca{
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
 }
 
-/*.text-justify{
-  
-    
-   
-}*/
+.btnPeca:hover{
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    transform: scale(1.1);/* Aumenta o tamanho do botão ao passar o mouse */
+}
 
-/* Seção Hero */
+/* Estilos botão pulsar */
+
+.pulsating-button {
+    animation: pulsate 1.5s infinite;
+}
+
+@keyframes pulsate {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* ================================
+   Seção Hero / texto cabeçalho
+================================ */
 .hero {
-    padding: 10px 0; /* Ajuste o valor para controlar a altura */
-    background-color: var(--color-primary) !important;
-    color: var(--color-white) !important;
+    padding: 10px 0;
+    background-color:var(--color-primary) ;
+    color: var(--color-white);
 }
 
-/* Títulos de seção com símbolo "+" */
-.section-title .icon-plus {
-    font-size: 2rem;
-    color: var(--color-secondary) !important;
+.texto-cabecalho {
+    padding-top: 1rem;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
-/* Seções */
-.vantagens, .rede-credenciada {
-    background-color: var(--color-secondary) !important;
-    color: var(--color-primary) !important;
-    padding: 40px 0;
+.paragrafo-cabecalho {
+    font-size: 1.2rem;
 }
 
-.beneficios {
-    background-color: var(--color-white) !important;
-    color: var(--color-primary) !important;
-}
+.maistxt {
+    font-size: 5rem;
+    color: var(--color-secondary);
 
-/* Estilo dos benefícios */
-.beneficios-content .card {
-    background-color: var(--color-secondary) !important;
-    color: var(--color-primary) !important;
-    border: 1px solid var(--color-primary) !important;
-    border-radius: 10px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3) !important; /* Aumenta a sombra */
-    min-height: 250px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+}
+.h2vantagens, .h2beneficios{
+    font-size: 3rem;
+    color: var(--color-primary);
+    font-weight: bold;
 }
 
 
-/* Estilo para as imagens dos cartões */
-.beneficios-content .card-img-top {
-    width: 50px;
-    height: auto;
+
+/* Estilos padrão para desktop */
+.text-content {
+    font-size: 18px; /* Tamanho do texto para desktop */
+    line-height: 1.6; /* Espaçamento entre linhas */
+    color: var(--color-text);
+    padding: 15px; /* Espaçamento interno */
+    margin: 20px auto; /* Espaçamento externo e centraliza o conteúdo */
+    text-align: justify; /* Alinhamento justificado */
+    
+
+}
+
+/* Classe personalizada para o banner */
+.custom-hero-banner {
+    background: url('img/bannerTotal.jpg') no-repeat center center;
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Defina o vh inicial */
+    
 }
 
 
-/* Centralizando conteúdo dentro dos cartões */
-.beneficios-content .card h4 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
+/* Versão mobile */
+@media (max-width: 768px) {
+    section.custom-hero-banner {
+        background: url('img/bannerApp.jpg') no-repeat center center;
+        background-size: cover;
+        background-position: center;
+        height: 50vh; /* Define uma altura menor para mobile */
+    }
 }
 
-.beneficios-content .card p {
-    font-size: 1em;
-}
 
-/* Botões */
-.btn-custom {
-    background-color: var(--color-primary) !important;
-    color: var(--color-white) !important;
-    border: none;
-}
 
-.btn-custom:hover {
-    background-color: #054a5b !important; /* Tom mais escuro para o hover */
-    color: var(--color-white) !important;
-}
+/* Ajustes para telas menores (mobile) */
+@media (max-width: 768px) {
 
-/* Estilo para o botão "Peça o seu" */
-.btn-primary {
-    background-color: var(--color-primary) !important;
-    color: var(--color-white) !important;
-    border: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.btn-primary:hover {
-    background-color: #054a5b !important; /* Tom mais escuro para o hover */
-}
-
-/* Rodapé */
-footer {
-    background-color: var(--color-primary) !important;
-    color: var(--color-white) !important;
-    padding: 20px;
-}
-
-/* Ajustes de layout para versões mobile */
-@media (max-width: 576px) {
-    /* Ajusta o espaçamento do texto na versão mobile */
-    .beneficios-content .card p {
-        margin: 10px 5px; /* Ajusta o espaçamento interno do texto */
-        font-size: 0.9em; /* Diminui levemente o tamanho do texto, se necessário */
+    .h2vantagens, .h2beneficios, .maistxt{
+        padding: 2rem 0; /* Ajusta o padding */
     }
 
-    /* Ajusta o padding dos títulos na versão mobile */
-    .hero, .vantagens, .rede-credenciada {
-        padding: 20px 0; /* Reduz o padding vertical na versão mobile */
-    }
+    .vantagens, .beneficios {
+        padding: 10px 0; /* Ajusta o padding */
 
-    /* Ajusta o espaçamento dos elementos de texto */
-    .section-title h2, .beneficios-content .card h5 {
-        margin-bottom: 5px; /* Reduz o espaçamento abaixo dos títulos */
+     }
+    .text-content {
+        font-size: 16px; /* Reduz o tamanho do texto */
+        line-height: 1.7; /* Aumenta o espaçamento entre linhas */
+        padding: 20px; /* Espaçamento interno */
+        margin: 20px; /* Espaçamento externo */
+        text-align: justify; /* Alinhamento justificado */
+        border-radius: 8px; /* Borda arredondada */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
     }
-
-    /* Ajusta o espaçamento das imagens nos cartões */
-    .beneficios-content .card-img-top {
-        margin-bottom: 5px;
+    
+    /* Espaçamento entre parágrafos */
+    .text-content p {
+        margin-bottom: 1.5em; /* Adiciona espaçamento entre parágrafos */
     }
 }
