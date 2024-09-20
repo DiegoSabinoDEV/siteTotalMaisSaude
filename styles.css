@@ -99,18 +99,42 @@ header {
     font-weight: bold;
 }
 
-
+.totaltxt {
+    color: var(--color-primary);
+}
 
 /* Estilos padrão para desktop */
-.text-content {
-    font-size: 18px; /* Tamanho do texto para desktop */
-    line-height: 1.6; /* Espaçamento entre linhas */
-    color: var(--color-text);
-    padding: 15px; /* Espaçamento interno */
-    margin: 20px auto; /* Espaçamento externo e centraliza o conteúdo */
-    text-align: justify; /* Alinhamento justificado */
-    
+.benefit-card {
+    background-color: #f1e511; /* Cor do fundo dos cards */
+    border-radius: 15px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 100%; /* Garante que todos os cartões tenham a mesma altura */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
+.benefit-card:hover {
+    transform: scale(1.05); /* Aumenta o tamanho ao passar o mouse */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Sombra mais intensa */
+}
+
+.benefit-title {
+    color: #06546f; /* Cor do texto */
+    font-weight: bold;
+    margin: 15px 0 10px;
+}
+
+.benefit-text {
+    color: #06546f;
+    font-size: 14px;
+}
+
+.icon-img {
+    width: 50px; /* Ajusta o tamanho do ícone */
+    margin-bottom: 15px;
 }
 
 /* Classe personalizada para o banner */
@@ -118,10 +142,9 @@ header {
     background: url('img/bannerTotal.jpg') no-repeat center center;
     background-size: cover;
     background-position: center;
-    height: 100vh; /* Defina o vh inicial */
+    height: 110vh; /* Defina o vh inicial */
     
 }
-
 
 /* Versão mobile */
 @media (max-width: 768px) {
@@ -129,35 +152,29 @@ header {
         background: url('img/bannerApp.jpg') no-repeat center center;
         background-size: cover;
         background-position: center;
-        height: 50vh; /* Define uma altura menor para mobile */
+        height: 58vh; /* Define uma altura menor para mobile */
     }
 }
 
+.row.beneficios-content {
+    margin-bottom: 30px; /* Ajuste conforme necessário */
+    row-gap: 20px; /* Espaçamento entre as linhas de cards */
+}
 
-
-/* Ajustes para telas menores (mobile) */
+@media (min-width: 768px) {
+    .row.beneficios-content .col-md-4 {
+        max-width: 30%; /* Diminuir a largura dos cards para dar mais espaço nas laterais */
+        padding: 0 15px; /* Ajuste o padding para controlar o espaçamento lateral */
+    }
+}
 @media (max-width: 768px) {
-
-    .h2vantagens, .h2beneficios, .maistxt{
-        padding: 2rem 0; /* Ajusta o padding */
+    .row.beneficios-content .col-6 {
+        max-width: 48%; /* Diminua a largura para criar mais espaçamento nas laterais */
+        margin: 10px 1%; /* Espaçamento lateral entre os cards */
     }
 
-    .vantagens, .beneficios {
-        padding: 10px 0; /* Ajusta o padding */
-
-     }
-    .text-content {
-        font-size: 16px; /* Reduz o tamanho do texto */
-        line-height: 1.7; /* Aumenta o espaçamento entre linhas */
-        padding: 20px; /* Espaçamento interno */
-        margin: 20px; /* Espaçamento externo */
-        text-align: justify; /* Alinhamento justificado */
-        border-radius: 8px; /* Borda arredondada */
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    }
-    
-    /* Espaçamento entre parágrafos */
-    .text-content p {
-        margin-bottom: 1.5em; /* Adiciona espaçamento entre parágrafos */
+    .benefit-card {
+        margin-bottom: 20px; /* Espaçamento entre os cartões na versão mobile */
+        padding: 15px; /* Ajuste o padding para uma melhor estética */
     }
 }
