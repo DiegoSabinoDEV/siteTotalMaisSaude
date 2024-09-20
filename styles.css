@@ -103,7 +103,31 @@ header {
     color: var(--color-primary);
 }
 
-/* Estilos padrão para desktop */
+
+/* Classe personalizada para o banner */
+.custom-hero-banner {
+    background: url('img/bannerTotal.jpg') no-repeat center center;
+    background-size: cover;
+    background-position: center;
+    height: 110vh; /* Defina o vh inicial */
+    
+}
+
+/* Versão mobile */
+@media (max-width: 768px) {
+    section.custom-hero-banner {
+        background: url('img/bannerApp.jpg') no-repeat center center;
+        background-size: cover;
+        background-position: center;
+        height: 58vh; /* Define uma altura menor para mobile */
+    }
+}
+
+.beneficios-content {
+
+    row-gap: 20px; /* Espaçamento entre as linhas de cards */
+}
+
 .benefit-card {
     background-color: #f1e511; /* Cor do fundo dos cards */
     border-radius: 15px;
@@ -137,44 +161,20 @@ header {
     margin-bottom: 15px;
 }
 
-/* Classe personalizada para o banner */
-.custom-hero-banner {
-    background: url('img/bannerTotal.jpg') no-repeat center center;
-    background-size: cover;
-    background-position: center;
-    height: 110vh; /* Defina o vh inicial */
-    
-}
-
-/* Versão mobile */
-@media (max-width: 768px) {
-    section.custom-hero-banner {
-        background: url('img/bannerApp.jpg') no-repeat center center;
-        background-size: cover;
-        background-position: center;
-        height: 58vh; /* Define uma altura menor para mobile */
-    }
-}
-
-.row.beneficios-content {
-    margin-bottom: 30px; /* Ajuste conforme necessário */
-    row-gap: 20px; /* Espaçamento entre as linhas de cards */
-}
-
+/* Responsivo - Desktop: 3 colunas */
 @media (min-width: 768px) {
     .row.beneficios-content .col-md-4 {
-        max-width: 30%; /* Diminuir a largura dos cards para dar mais espaço nas laterais */
-        padding: 0 15px; /* Ajuste o padding para controlar o espaçamento lateral */
+        max-width: 33.333%; /* Garante 3 colunas por linha */
     }
 }
+
+/* Responsivo - Mobile: 2 colunas */
 @media (max-width: 768px) {
     .row.beneficios-content .col-6 {
-        max-width: 48%; /* Diminua a largura para criar mais espaçamento nas laterais */
-        margin: 10px 1%; /* Espaçamento lateral entre os cards */
+        max-width: 50%; /* Garante 2 colunas por linha */
     }
 
     .benefit-card {
         margin-bottom: 20px; /* Espaçamento entre os cartões na versão mobile */
-        padding: 15px; /* Ajuste o padding para uma melhor estética */
     }
 }
