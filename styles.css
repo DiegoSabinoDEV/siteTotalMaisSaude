@@ -12,7 +12,7 @@
    Estilo Geral
 ================================ */
 body {
-    background-color: var(--color-white);
+    background-color: #F1F1F1;
     font-family: 'Poppins', Arial, sans-serif;
     padding-top: 100px; /* Ajuste conforme a altura do cabeçalho */
 }
@@ -79,15 +79,25 @@ header {
     color: var(--color-white);
 }
 
+/* Estilo para o banner no desktop */
+.custom-hero-banner {
+    background: url('img/bannerTotal.jpg') no-repeat center center;
+    background-size: cover;
+    height: 110vh; /* Defina uma altura adequada para o desktop */
+    display: block; /* Garante que o banner apareça no desktop */
+}
+
 .texto-cabecalho {
     padding-top: 1rem;
     font-size: 2.5rem;
     font-weight: bold;
     text-transform: uppercase;
+    color: var(--color-primary);
 }
 
 .paragrafo-cabecalho {
     font-size: 1.2rem;
+    color: var(--color-primary);
 }
 
 .maistxt {
@@ -101,13 +111,6 @@ header {
     font-weight: bold;
 }
 
-/* Ajustes de estilo para a imagem e seção "Vantagens" */
-.shadow-custom {
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
-
 .vantagens .container {
     display: flex;
     align-items: center;
@@ -116,6 +119,7 @@ header {
 }
 
 .text-content {
+    text-align: justify;
     font-size: 1rem;
     line-height: 1.6;
     color: var(--color-text);
@@ -136,7 +140,6 @@ header {
         padding: 10px;
     }
 }
-
 
 /* ================================
    Cartões de Benefícios
@@ -184,7 +187,7 @@ header {
    Seção Missão, Visão e Valores
 ================================ */
 .missao-visao-valores {
-    background-color: var(--color-white);
+    background-color: #F1F1F1;
     padding: 60px 0;
 }
 
