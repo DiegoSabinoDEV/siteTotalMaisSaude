@@ -6,7 +6,6 @@
     --color-secondary: #EAE932;
     --color-white: #f9f9f9;
     --color-text: #333333;
-
 }
 
 /* ================================
@@ -19,20 +18,22 @@ body {
 }
 
 /* ================================
-   Cabeçalho
+   Cabeçalho e Logo
 ================================ */
 header {
-    background-color: var(--color-primary) ;
-    color: var(--color-white) ;
+    background-color: var(--color-primary);
+    color: var(--color-white);
 }
 
 .logo {
-    max-width: 200px;/* Verificar o melhor tamanho ao finalizar projeto */
+    max-width: 200px; /* Verificar o melhor tamanho ao finalizar projeto */
     height: auto;
-    
 }
 
-.btnPeca{
+/* ================================
+   Botão "Pedir Agora"
+================================ */
+.btnPeca {
     background-color: var(--color-secondary);
     color: var(--color-primary);
     border: none;
@@ -41,17 +42,17 @@ header {
     font-weight: bold;
     cursor: pointer;
     transition: all 0.3s ease;
-    
 }
 
-.btnPeca:hover{
+.btnPeca:hover {
     background-color: var(--color-secondary);
     color: var(--color-primary);
-    transform: scale(1.1);/* Aumenta o tamanho do botão ao passar o mouse */
+    transform: scale(1.1); /* Efeito de hover */
 }
 
-/* Estilos botão pulsar */
-
+/* ================================
+   Efeito Pulsar para o Botão
+================================ */
 .pulsating-button {
     animation: pulsate 1.5s infinite;
 }
@@ -69,11 +70,12 @@ header {
 }
 
 /* ================================
-   Seção Hero / texto cabeçalho
+   Seção Hero / Texto do Cabeçalho
 ================================ */
+
 .hero {
     padding: 10px 0;
-    background-color:var(--color-primary) ;
+    background-color: var(--color-primary);
     color: var(--color-white);
 }
 
@@ -91,71 +93,67 @@ header {
 .maistxt {
     font-size: 5rem;
     color: var(--color-secondary);
-
 }
-.h2vantagens, .h2beneficios{
+
+.h2vantagens, .h2beneficios {
     font-size: 2.5rem;
     color: var(--color-primary);
     font-weight: bold;
 }
 
-.totaltxt {
-    color: var(--color-primary);
+/* Ajustes de estilo para a imagem e seção "Vantagens" */
+.shadow-custom {
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-bottom: 20px;
 }
 
-/* Estilos padrão para desktop */
+.vantagens .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
 .text-content {
-    font-size: 18px; /* Tamanho do texto para desktop */
-    line-height: 1.6; /* Espaçamento entre linhas */
+    font-size: 1rem;
+    line-height: 1.6;
     color: var(--color-text);
-    padding: 15px; /* Espaçamento interno */
-    margin: 20px auto; /* Espaçamento externo e centraliza o conteúdo */
-    text-align: justify; /* Alinhamento justificado */
+    padding: 15px;
 }
 
-
-
-
-/* Classe personalizada para o banner */
-.custom-hero-banner {
-    background: url('img/bannerTotal.jpg') no-repeat center center;
-    background-size: cover;
-    background-position: center;
-    height: 110vh; /* Defina o vh inicial */
-    /* cria versao do banner para telas maiores que 1080p */
-    /* cria versao do banner para telas maiores que 1080p */
-    /* cria versao do banner para telas maiores que 1080p */
-    /* cria versao do banner para telas maiores que 1080p */
-}
-
-/* Versão mobile */
 @media (max-width: 768px) {
-    section.custom-hero-banner {
-        background: url('img/bannerApp.jpg') no-repeat center center;
-        background-size: cover;
-        background-position: center;
-        height: 48vh; /* Define uma altura menor para mobile */
+    .vantagens .container {
+        flex-direction: column;
+        text-align: center;
     }
-} 
 
-.beneficios-content {
-    row-gap: 20px; /* Espaçamento entre as linhas de cards */
-    padding: 0 15px; /* Espaçamento interno do container na lateral */
+    .shadow-custom {
+        margin-bottom: 10px;
+    }
+
+    .text-content {
+        padding: 10px;
+    }
 }
 
+
+/* ================================
+   Cartões de Benefícios
+================================ */
 .benefit-card {
-    background-color: var(--color-secondary) !important;
-    color: var(--color-primary) !important;
-    border: 1px solid var(--color-primary) !important;
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
     border-radius: 10px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
     transition: box-shadow 0.3s, transform 0.3s;
     min-height: 250px;
-    margin-bottom: 30px; /* Aumenta o espaçamento entre os cartões */
-    padding: 20px; /* Espaçamento interno dentro dos cartões */
+    margin-bottom: 30px;
+    padding: 20px;
     flex-direction: column;
     justify-content: center;
-    max-width: 95%; /* Limita a largura dos cartões para não encostar nas bordas */
+    max-width: 95%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -167,7 +165,7 @@ header {
 
 .benefit-title {
     font-size: 15px;
-    color: var(--color-primary); /* Cor do texto */
+    color: var(--color-primary);
     font-weight: bold;
     margin: 15px 0 10px;
 }
@@ -178,90 +176,33 @@ header {
 }
 
 .icon-img {
-    width: 50px; /* Ajusta o tamanho do ícone */
+    width: 50px;
     margin-bottom: 10px;
-}
-
-/* Responsivo - Desktop: 3 colunas */
-@media (min-width: 768px) {
-    .row.beneficios-content .col-md-4 {
-        max-width: 33.333%; /* Garante 3 colunas por linha */
-    }
-}
-
-/* Responsivo - Mobile: 2 colunas */
-@media (max-width: 768px) {
-    .row.beneficios-content .col-6 {
-        max-width: 50%; /* Garante 2 colunas por linha */
-        padding: 10px; /* Adiciona espaçamento interno nas colunas */
-    }
-
-    .benefit-card {
-        margin-bottom: 30px; /* Aumenta o espaçamento entre os cartões */
-        max-width: 95%; /* Limita a largura dos cartões para não encostar nas bordas */
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
-/* Ajustes para telas menores (mobile) */
-@media (max-width: 768px) {
-
-    .h2vantagens, .h2beneficios, .maistxt {
-        padding: 2rem 0; /* Ajusta o padding */
-    }
-
-    .vantagens, .beneficios {
-        padding: 10px 0; /* Ajusta o padding */
-    }
-
-    .text-content {
-        font-size: 16px; /* Reduz o tamanho do texto */
-        line-height: 1.7; /* Aumenta o espaçamento entre linhas */
-        padding: 20px; /* Espaçamento interno */
-        margin: 20px; /* Espaçamento externo */
-        text-align: justify; /* Alinhamento justificado */
-        border-radius: 8px; /* Borda arredondada */
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    }
-
-    /* Espaçamento entre parágrafos */
-    .text-content p {
-        margin-bottom: 1.5em; /* Adiciona espaçamento entre parágrafos */
-    }
-}
-
-
-.quem-somos{
-    margin-top: 100px;
-    background-color: var(--color-primary);
-    color: var(--color-white);
-    padding: 10px 0;
 }
 
 /* ================================
    Seção Missão, Visão e Valores
 ================================ */
 .missao-visao-valores {
-    background-color: var(--color-white); /* Cor de fundo clara */
-    padding: 60px 0; /* Espaçamento interno */
+    background-color: var(--color-white);
+    padding: 60px 0;
 }
 
 .missao-visao-valores .container {
-    max-width: 1200px; /* Define a largura máxima do container */
+    max-width: 1200px;
 }
 
 .missao-visao-valores .row {
     display: flex;
-    justify-content: space-between; /* Distribui o espaço igualmente */
+    justify-content: space-between;
 }
 
 .missao-visao-valores .col-md-4 {
-    background-color: var(--color-primary); /* Cor de fundo azul escuro */
-    color: var(--color-white); /* Cor do texto */
+    background-color: var(--color-primary);
+    color: var(--color-white);
     padding: 20px;
-    border-radius: 15px; /* Bordas arredondadas */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -274,45 +215,144 @@ header {
     font-size: 1.8rem;
     font-weight: bold;
     text-transform: uppercase;
-    color: var(--color-white); /* Cor do título */
+    color: var(--color-white);
     margin-bottom: 20px;
 }
 
-.missao-visao-valores p,
-.missao-visao-valores li {
-    font-size: 1rem; /* Tamanho do texto */
-    color: var(--color-secondary); /* Cor do texto */
+.missao-visao-valores p, .missao-visao-valores li {
+    font-size: 1rem;
+    color: var(--color-secondary);
     line-height: 1.6;
 }
 
 .missao-visao-valores ul {
-    padding-left: 0; /* Remove o padding padrão da lista */
-    list-style-type: none; /* Remove o marcador da lista */
+    padding-left: 0;
+    list-style-type: none;
 }
 
 .missao-visao-valores ul li::before {
-    content: "\2713"; /* Adiciona o símbolo ✓ antes de cada item */
+    content: "\2713";
     margin-right: 10px;
-    color: var(--color-secondary); /* Cor amarela para os ícones */
+    color: var(--color-secondary);
     font-weight: bold;
 }
 
-.missao-visao-valores .col-md-4:nth-child(2) {
-    background-color: var(--color-primary); /* Mesma cor para consistência */
+/* ================================
+   Breakpoints
+================================ */
+
+/* Mobile pequeno (até 576px) */
+@media (max-width: 576px) {
+    /* Estilos para celulares pequenos */
+    .texto-cabecalho {
+        font-size: 2rem;
+    }
+
+    .maistxt {
+        font-size: 3rem;
+    }
+
+    .benefit-card {
+        margin-bottom: 20px;
+    }
 }
 
-.missao-visao-valores .col-md-4:nth-child(3) ul {
-    padding-left: 20px; /* Adiciona um pequeno espaçamento para o texto da lista */
-}
-
+/* Tablets e celulares grandes (até 768px) */
 @media (max-width: 768px) {
+    /* Ajustes para o botão "Pedir Agora" */
+    .btm {
+        padding-right: 30px;
+    }
+
+    /* Ajustes para o banner hero na versão mobile */
+    section.custom-hero-banner {
+        background: url('img/bannerApp.jpg') no-repeat center center;
+        background-size: cover;
+        background-position: center;
+        height: 48vh;
+    }
+
+    .row.beneficios-content .col-6 {
+        max-width: 50%;
+        padding: 10px;
+    }
+
+    .benefit-card {
+        margin-bottom: 30px;
+        max-width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .h2vantagens, .h2beneficios, .maistxt {
+        padding: 2rem 0;
+    }
+
+    .text-content {
+        font-size: 16px;
+        line-height: 1.7;
+        padding: 20px;
+        margin: 20px;
+        text-align: justify;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .text-content p {
+        margin-bottom: 1.5em;
+    }
+
     .missao-visao-valores .row {
-        flex-direction: column; /* Alinha os itens verticalmente no mobile */
+        flex-direction: column;
         align-items: center;
     }
 
     .missao-visao-valores .col-md-4 {
-        margin-bottom: 30px; /* Espaçamento entre as colunas no mobile */
-        width: 80%; /* Define a largura para caber melhor em telas menores */
+        margin-bottom: 30px;
+        width: 80%;
+    }
+}
+
+/* Tablets em modo paisagem / Telas médias (até 992px) */
+@media (max-width: 992px) {
+    /* Ajustes para tablets em modo paisagem e laptops menores */
+    .texto-cabecalho {
+        font-size: 2.2rem;
+    }
+
+    .benefit-card {
+        margin-bottom: 25px;
+    }
+
+    .missao-visao-valores {
+        padding: 40px 0;
+    }
+}
+
+/* Desktops (até 1200px) */
+@media (max-width: 1200px) {
+    /* Ajustes para desktops e laptops maiores */
+    .texto-cabecalho {
+        font-size: 2.4rem;
+    }
+
+    .benefit-card {
+        margin-bottom: 28px;
+    }
+
+    .missao-visao-valores {
+        padding: 50px 0;
+    }
+}
+
+/* Desktops grandes (acima de 1200px) */
+@media (min-width: 1200px) {
+    /* Ajustes para telas grandes */
+    .texto-cabecalho {
+        font-size: 2.6rem;
+    }
+
+    .benefit-card {
+        margin-bottom: 30px;
     }
 }
