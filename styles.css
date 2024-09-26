@@ -198,6 +198,10 @@ header {
     margin-bottom: 10px;
 }
 
+.imgsesc{
+    max-width: 150px;
+}
+
 /* ================================
    Seção Missão, Visão e Valores
 ================================ */
@@ -278,11 +282,20 @@ header {
         font-size: 1.5rem;
         color: var(--color-secondary);/*testar outras cores no texto*/
         font-weight: bold;
+        line-height: 1.7;
+        padding: 20px;
+        margin: 20px;
+        border-radius: 8px;
+        box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
     }
     .imgvantagens{
           max-width: 200px; /* Verificar o melhor tamanho ao finalizar projeto */
           height: auto;
     }
+    .imgsesc{
+        max-width: 250px;
+    }
+    
 }
 
 /* Tablets e celulares grandes (até 768px) */
