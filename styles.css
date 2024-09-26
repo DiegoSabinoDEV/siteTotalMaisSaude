@@ -12,7 +12,7 @@
    Estilo Geral
 ================================ */
 body {
-    background-color: #F1F1F1;
+    background-color: #F1F1F1; /*lembrar de adcionar no root*/
     font-family: 'Poppins', Arial, sans-serif;
     padding-top: 100px; /* Ajuste conforme a altura do cabeçalho */
 }
@@ -278,6 +278,10 @@ header {
         font-size: 1.5rem;
         color: var(--color-secondary);/*testar outras cores no texto*/
         font-weight: bold;
+    }
+    .imgvantagens{
+          max-width: 200px; /* Verificar o melhor tamanho ao finalizar projeto */
+          height: auto;
     }
 }
 
