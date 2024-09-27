@@ -4,7 +4,7 @@
 :root {
     --color-primary: #06546f;
     --color-secondary: #EAE932;
-    --color-white: #f9f9f9;
+    --color-white: #F1F1F1;
     --color-text: #333333;
 }
 
@@ -12,7 +12,7 @@
    Estilo Geral
 ================================ */
 body {
-    background-color: #F1F1F1; /*lembrar de adcionar no root*/
+    background-color: var(--color-white); /*lembrar de adcionar no root*/
     font-family: 'Poppins', Arial, sans-serif;
     padding-top: 100px; /* Ajuste conforme a altura do cabeçalho */
 }
@@ -206,7 +206,7 @@ header {
    Seção Missão, Visão e Valores
 ================================ */
 .missao-visao-valores {
-    background-color: #F1F1F1;
+    background-color: var(--color-white);
     padding: 60px 0;
 }
 
@@ -294,6 +294,7 @@ header {
     }
     .imgsesc{
         max-width: 250px;
+        
     }
     
 }
