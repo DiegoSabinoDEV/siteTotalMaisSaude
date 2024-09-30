@@ -195,10 +195,18 @@ header {
 ================================ */
 
 .quem-somos{
-    background-color: var(--color-primary);
+    background: linear-gradient(90deg, #06546f, #4a8190);
 }
 
-.texto-cabecalho-quem, .mvvtxt{
+.texto-cabecalho-quem{
+    color: var(--color-secondary);
+    padding: 1rem 0rem 1rem 0;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.mvvtxt{
     background-color: var(--color-primary);
     padding: 1rem 0rem 1rem 0;
     font-size: 2.5rem;
@@ -229,6 +237,7 @@ header {
 ================================ */
 
 /* Mobile pequeno (até 576px) */
+
 @media (max-width: 576px) {
     /* Estilos para celulares pequenos */
     .texto-cabecalho-quem {
@@ -245,7 +254,8 @@ header {
     .list-unstyled{
         text-align: center;
         font-size: 1.5rem;
-        color: var(--color-secondary);/*testar outras cores no texto*/
+        background-color: var(--color-secondary);
+        color: var(--color-text);/*testar outras cores no texto*/
         font-weight: bold;
         line-height: 1.7;
         padding: 20px;
