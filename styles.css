@@ -87,23 +87,6 @@ header {
     display: block; /* Garante que o banner apareça no desktop */
 }
 
-.texto-cabecalho-quem {
-    background-color: var(--color-primary);
-    padding-top: 1rem;
-    font-size: 2.5rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: var(--color-secondary);
-    border: 1px solid var(--color-primary);
-    border-radius: 10px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-    
-}
-
-.paragrafo-cabecalho-quem {
-    font-size: 1.2rem;
-    color: var(--color-primary);
-}
 
 .maistxt {
     font-size: 5rem;
@@ -210,59 +193,36 @@ header {
 /* ================================
    Seção Missão, Visão e Valores
 ================================ */
-.missao-visao-valores {
-    background-color: var(--color-white);
-    padding: 60px 0;
-}
 
-.missao-visao-valores .container {
-    max-width: 1200px;
-}
-
-.missao-visao-valores .row {
-    display: flex;
-    justify-content: space-between;
-}
-
-.missao-visao-valores .col-md-4 {
+.quem-somos{
     background-color: var(--color-primary);
-    color: var(--color-white);
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.missao-visao-valores .col-md-4:hover {
-    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Aumenta a intensidade da sombra */
-}
-
-.missao-visao-valores h3 {
-    font-size: 1.8rem;
+.texto-cabecalho-quem, .mvvtxt{
+    background-color: var(--color-primary);
+    padding: 1rem 0rem 1rem 0;
+    font-size: 2.5rem;
     font-weight: bold;
     text-transform: uppercase;
-    color: var(--color-white);
-    margin-bottom: 20px;
-}
-
-.missao-visao-valores p, .missao-visao-valores li {
-    font-size: 1rem;
     color: var(--color-secondary);
-    line-height: 1.6;
+    border: 1px solid var(--color-primary);
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    
+}
+.paragrafo-cabecalho-quem, .container {
+    font-size: 1.2rem;
+    color: var(--color-primary);
+    
+   
+    
 }
 
-.missao-visao-valores ul {
-    padding-left: 0;
-    list-style-type: none;
+.mvvp{
+  color: var(--color-white);
 }
 
-.missao-visao-valores ul li::before {
-    content: "\2713";
-    margin-right: 10px;
-    color: var(--color-secondary);
-    font-weight: bold;
-}
+
 
 /* ================================
    Breakpoints
