@@ -147,48 +147,78 @@ header {
 /* ================================
    Cartões de Benefícios
 ================================ */
+
 .benefit-card {
-    background-color: var(--color-secondary);
-    color: var(--color-primary);
-    border: 1px solid var(--color-primary);
-    border-radius: 10px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.3s, transform 0.3s;
-    min-height: 250px;
-    margin-bottom: 30px;
+    position: relative;
     padding: 20px;
-    flex-direction: column;
-    justify-content: center;
-    max-width: 95%;
-    margin-left: auto;
-    margin-right: auto;
+    background-color: var(--color-secondary);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
 }
 
 .benefit-card:hover {
-    transform: scale(1.05); /* Aumenta o tamanho ao passar o mouse */
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Sombra mais intensa */
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.benefit-card img {
+    max-width: 80px;
+    margin-bottom: 15px;
 }
 
 .benefit-title {
-    font-size: 15px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
     color: var(--color-primary);
-    font-weight: bold;
-    margin: 15px 0 10px;
 }
 
 .benefit-text {
+    font-size: 1rem;
+    color: var(--color-text);
+}
+
+/* Efeito de sobreposição */
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-primary);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 10px;
+}
+
+
+.card-overlay::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    opacity: 1;
+    border-radius: 10px;
+}
+
+/* Título da seção */
+.h2beneficios {
     color: var(--color-primary);
-    font-size: 14px;
 }
 
-.icon-img {
-    width: 50px;
-    margin-bottom: 10px;
+.maistxt {
+    color: var(--color-secondary);
 }
 
-.imgsesc{
-    max-width: 150px;
+.paragrafo-cabecalho-quem {
+    color: var(--color-text);
 }
+
 
 /* ================================
    Seção Missão, Visão e Valores
@@ -237,7 +267,6 @@ header {
 ================================ */
 
 /* Mobile pequeno (até 576px) */
-
 @media (max-width: 576px) {
     /* Estilos para celulares pequenos */
     .texto-cabecalho-quem {
@@ -248,14 +277,53 @@ header {
         font-size: 3rem;
     }
 
-    .benefit-card {
-        margin-bottom: 20px;
+    .beneficios-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: stretch; /* Garante que todos os cartões tenham a mesma altura */
     }
-    .list-unstyled{
+
+    .benefit-card {
+        display: flex;
+        flex-direction: column; /* Garante que o conteúdo interno fique em coluna */
+        justify-content: space-between; /* Distribui o conteúdo interno */
+        flex-grow: 1; /* Permite que os cartões cresçam igualmente */
+        padding: 15px;
+        margin-bottom: 20px;
+        background-color: var(--color-white);
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        max-width: 90%; /* Mantém o tamanho responsivo no mobile */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .benefit-card img {
+        max-width: 60px; /* Ajuste do tamanho do ícone no mobile */
+        margin-bottom: 15px;
+        align-self: center;
+    }
+
+    .benefit-title {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: var(--color-primary);
+        text-align: center;
+    }
+
+    .benefit-text {
+        font-size: 0.9rem;
+        color: var(--color-text);
+        text-align: center;
+        margin-top: 5px;
+    }
+
+    .list-unstyled {
         text-align: center;
         font-size: 1.5rem;
         background-color: var(--color-secondary);
-        color: var(--color-text);/*testar outras cores no texto*/
+        color: var(--color-text); /* testar outras cores no texto */
         font-weight: bold;
         line-height: 1.7;
         padding: 20px;
@@ -263,15 +331,15 @@ header {
         border-radius: 8px;
         box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
     }
-    .imgvantagens{
-          max-width: 200px; /* Verificar o melhor tamanho ao finalizar projeto */
-          height: auto;
+
+    .imgvantagens {
+        max-width: 200px; /* Verificar o melhor tamanho ao finalizar projeto */
+        height: auto;
     }
-    .imgsesc{
+
+    .imgsesc {
         max-width: 250px;
-        
     }
-    
 }
 
 /* Tablets e celulares grandes (até 768px) */
@@ -292,13 +360,43 @@ header {
     .row.beneficios-content .col-6 {
         max-width: 50%;
         padding: 10px;
+        display: flex;
+        align-items: stretch; /* Garante que todos os cartões tenham a mesma altura */
     }
 
     .benefit-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; /* Distribui o conteúdo interno */
+        flex-grow: 1; /* Garante que os cartões cresçam igualmente */
+        padding: 20px;
         margin-bottom: 30px;
+        background-color: var(--color-white);
+        border-radius: 10px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
         max-width: 95%;
         margin-left: auto;
         margin-right: auto;
+    }
+
+    .benefit-card img {
+        max-width: 70px; /* Tamanho dos ícones para tablets */
+        margin-bottom: 15px;
+        align-self: center;
+    }
+
+    .benefit-title {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: var(--color-primary);
+        text-align: center;
+    }
+
+    .benefit-text {
+        font-size: 1rem;
+        color: var(--color-text);
+        text-align: center;
+        margin-top: 5px;
     }
 
     .h2vantagens, .h2beneficios, .maistxt {
