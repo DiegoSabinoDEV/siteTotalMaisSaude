@@ -88,6 +88,11 @@ header {
 }
 
 
+/*.paragrafo-cabecalho-quem {
+    color: var(--color-text);
+}
+*/
+
 .maistxt {
     font-size: 5rem;
     color: var(--color-secondary);
@@ -129,20 +134,7 @@ header {
     color: var(--color-secondary);
 }
 
-@media (max-width: 768px) {
-    .vantagens .container {
-        flex-direction: column;
-        text-align: center;
-    }
 
-    .shadow-custom {
-        margin-bottom: 10px;
-    }
-
-    .text-content {
-        padding: 10px;
-    }
-}
 
 /* ================================
    Cartões de Benefícios
@@ -206,19 +198,6 @@ header {
     border-radius: 10px;
 }
 
-/* Título da seção */
-.h2beneficios {
-    color: var(--color-primary);
-}
-
-.maistxt {
-    color: var(--color-secondary);
-}
-
-.paragrafo-cabecalho-quem {
-    color: var(--color-text);
-}
-
 
 /* ================================
    Seção Missão, Visão e Valores
@@ -252,15 +231,11 @@ header {
     font-size: 1.2rem;
     color: var(--color-primary);
     
-   
-    
 }
 
 .mvvp{
   color: var(--color-white);
 }
-
-
 
 
 /* ================================
@@ -346,6 +321,18 @@ header {
 /* Tablets e celulares grandes (até 768px) */
 @media (max-width: 768px) {
 
+        .vantagens .container {
+            flex-direction: column;
+            text-align: center;
+        }
+    
+        .shadow-custom {
+            margin-bottom: 10px;
+        }
+    
+        .text-content {
+            padding: 10px;
+        }
 /* img downoad app */
 
 
