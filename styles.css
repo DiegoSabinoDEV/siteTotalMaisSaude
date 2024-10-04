@@ -321,6 +321,28 @@ header {
 /* Tablets e celulares grandes (até 768px) */
 @media (max-width: 768px) {
 
+/*Qume Somos Mobile*/
+
+.mvvtxt{
+    background-color: var(--color-primary);
+    padding: 1rem 0rem 1rem 0;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--color-secondary);
+    border: 1px solid var(--color-primary);
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    
+}
+
+.mvvp{
+  color: var(--color-white);
+  text-align: justify;
+}
+
+
+
         .vantagens .container {
             flex-direction: column;
             text-align: center;
@@ -333,40 +355,6 @@ header {
         .text-content {
             padding: 10px;
         }
-/* img downoad app */
-
-
-
-/* ================================
-    Hero1 e App Mobile
-
-    .maistxt {
-    font-size: 5rem;
-    color: var(--color-secondary);
-}
-
-
-.h2credenciada, .txtparceiro{
-    font-size: 2.5rem;
-    color: var(--color-secondary);
-    font-weight: bold;
-}
-
-.vantagens .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-}
-
-.text-content {
-    text-align: justify;
-    font-size: 1rem;
-    line-height: 1.6;
-    color: var(--color-text);
-    padding: 15px;
-}
-================================ */
 
 .heroh2, .heroh5{
     font-size: 2.5rem;
@@ -392,6 +380,11 @@ header {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+/* img downoad app */
+
+.imgapple, .imggoogle{
+    padding: 10px;
+}
 
 .hero1{
     background-color: var(--color-white);
