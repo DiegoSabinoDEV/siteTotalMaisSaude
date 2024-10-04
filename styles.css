@@ -12,7 +12,7 @@
    Estilo Geral
 ================================ */
 body {
-    background-color: var(--color-white); /*lembrar de adcionar no root*/
+    background-color: var(--color-white); 
     font-family: 'Poppins', Arial, sans-serif;
     padding-top: 100px; /* Ajuste conforme a altura do cabeçalho */
 }
@@ -31,6 +31,23 @@ header {
 }
 
 /* ================================
+   Seção Hero / Texto do Cabeçalho
+================================ */
+.hero {
+    padding: 10px 0;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+/* Estilo para o banner no desktop */
+.custom-hero-banner {
+    background: url('img/bannerTotalRdu.jpg') no-repeat center center;
+    background-size: cover;
+    height: 115vh; /* Defina uma altura adequada para o desktop */
+    display: block; /* Garante que o banner apareça no desktop */
+}
+
+/* ================================
    Botão "Pedir Agora"
 ================================ */
 .btnPeca {
@@ -45,8 +62,6 @@ header {
 }
 
 .btnPeca:hover {
-    background-color: var(--color-secondary);
-    color: var(--color-primary);
     transform: scale(1.1); /* Efeito de hover */
 }
 
@@ -70,29 +85,8 @@ header {
 }
 
 /* ================================
-   Seção Hero / Texto do Cabeçalho
+   Estilos Diversos
 ================================ */
-
-.hero {
-    padding: 10px 0;
-    background-color: var(--color-primary);
-    color: var(--color-white);
-}
-
-/* Estilo para o banner no desktop */
-.custom-hero-banner {
-    background: url('img/bannerTotalRdu.jpg') no-repeat center center;
-    background-size: cover;
-    height: 115vh; /* Defina uma altura adequada para o desktop */
-    display: block; /* Garante que o banner apareça no desktop */
-}
-
-
-/*.paragrafo-cabecalho-quem {
-    color: var(--color-text);
-}
-*/
-
 .maistxt {
     font-size: 5rem;
     color: var(--color-secondary);
@@ -104,7 +98,7 @@ header {
     font-weight: bold;
 }
 
-.h2credenciada, .txtparceiro{
+.h2credenciada, .txtparceiro {
     font-size: 2.5rem;
     color: var(--color-secondary);
     font-weight: bold;
@@ -125,21 +119,18 @@ header {
     padding: 15px;
 }
 
-.totaltxt{
+.totaltxt {
     color: var(--color-primary);
 }
 
-.credenciados{
+.credenciados {
     background-color: var(--color-primary);
     color: var(--color-secondary);
 }
 
-
-
 /* ================================
    Cartões de Benefícios
 ================================ */
-
 .benefit-card {
     position: relative;
     padding: 20px;
@@ -147,7 +138,7 @@ header {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    overflow: hidden;
+    overflow: hidden; /* Garante que o conteúdo extra fique escondido */
 }
 
 .benefit-card:hover {
@@ -185,7 +176,6 @@ header {
     border-radius: 10px;
 }
 
-
 .card-overlay::before {
     content: "";
     position: absolute;
@@ -198,26 +188,24 @@ header {
     border-radius: 10px;
 }
 
-
 /* ================================
    Seção Missão, Visão e Valores
 ================================ */
-
-.quem-somos{
+.quem-somos {
     background: linear-gradient(90deg, #06546f, #4a8190);
 }
 
-.texto-cabecalho-quem{
+.texto-cabecalho-quem {
     color: var(--color-secondary);
-    padding: 1rem 0rem 1rem 0;
+    padding: 1rem 0; /* Unificação do padding */
     font-size: 2.5rem;
     font-weight: bold;
     text-transform: uppercase;
 }
 
-.mvvtxt{
+.mvvtxt {
     background-color: var(--color-primary);
-    padding: 1rem 0rem 1rem 0;
+    padding: 1rem 0; /* Unificação do padding */
     font-size: 2.5rem;
     font-weight: bold;
     text-transform: uppercase;
@@ -225,16 +213,15 @@ header {
     border: 1px solid var(--color-primary);
     border-radius: 10px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-    
 }
+
 .paragrafo-cabecalho-quem, .container {
     font-size: 1.2rem;
     color: var(--color-primary);
-    
 }
 
-.mvvp{
-  color: var(--color-white);
+.mvvp {
+    color: var(--color-white);
 }
 
 /* ================================
@@ -252,7 +239,7 @@ header {
 
 .footer-description {
     font-size: 1rem;
-    color: var(--color-white);
+    color: var(--color-white); /* Manter consistência com o footer */
     margin-top: 10px;
 }
 
@@ -308,6 +295,8 @@ header {
     color: var(--color-primary); /* Cor principal */
     margin-bottom: 15px;
 }
+
+
 
 /* ================================
    Breakpoints
