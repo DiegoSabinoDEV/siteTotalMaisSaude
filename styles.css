@@ -81,9 +81,9 @@ header {
 
 /* Estilo para o banner no desktop */
 .custom-hero-banner {
-    background: url('img/bannerTotal.jpg') no-repeat center center;
+    background: url('img/bannerTotalRdu.jpg') no-repeat center center;
     background-size: cover;
-    height: 110vh; /* Defina uma altura adequada para o desktop */
+    height: 115vh; /* Defina uma altura adequada para o desktop */
     display: block; /* Garante que o banner apareça no desktop */
 }
 
@@ -375,34 +375,35 @@ header {
 /* Mobile pequeno (até 576px) */
 @media (max-width: 576px) {
 
-    /* Ajuste do título de navegação para versão mobile 
-    .footer-heading {
-        color: var(--color-white);
-        font-size: 1rem; 
-        text-align: center;
-        margin-bottom: 10px;
-    }
-*/
-      /* Ajuste dos links de navegação para versão mobile */
-      .footer-link-custom {
-        font-size: 0.9rem;
-        display: block;
-        text-align: center;
-        padding: 5px 0; /* Reduz o padding vertical */
-        margin-bottom: 10px; /* Ajusta o espaçamento entre os links */
-        color: var(--color-primary); /* Cor de texto de acordo com a paleta */
-    }
+    /*Comentados para ser usados no futuro*/
+            /* Ajuste do título de navegação para versão mobile 
+            .footer-heading {
+                color: var(--color-white);
+                font-size: 1rem; 
+                text-align: center;
+                margin-bottom: 10px;
+            }
+        */
+            /* Ajuste dos links de navegação para versão mobile 
+            .footer-link-custom {
+                font-size: 0.9rem;
+                display: block;
+                text-align: center;
+                padding: 5px 0; 
+                margin-bottom: 10px; 
+                color: var(--color-primary);
+            }*/
 
-       /* Ajusta a lista para ficar centralizada e ocupando a largura total */
-       .list-unstyled-footer {
-        background-color: var(--color-secondary);
-        border-radius: 10px;
-        padding-left: 0;
-    padding-right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 80%; /* Diminui a largura da lista */
-    }
+            /* Ajusta a lista para ficar centralizada e ocupando a largura total 
+            .list-unstyled-footer {
+                background-color: var(--color-secondary);
+                border-radius: 10px;
+                padding-left: 0;
+            padding-right: 0;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 80%; 
+            }*/
 
     .dev-icon {
         max-width: 20px; /* Tamanho ainda menor para dispositivos móveis */
@@ -577,7 +578,7 @@ header {
         background: url('img/bannerApp.jpg') no-repeat center center;
         background-size: cover;
         background-position: center;
-        height: 48vh;
+        height: 52vh;
     }
 
     .row.beneficios-content .col-6 {
