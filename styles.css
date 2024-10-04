@@ -237,13 +237,177 @@ header {
   color: var(--color-white);
 }
 
+/* ================================
+   Footer
+================================ */
+.footer {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 40px 0;
+}
+
+.footer .logo-footer {
+    max-width: 150px;
+}
+
+.footer-description {
+    font-size: 1rem;
+    color: var(--color-white);
+    margin-top: 10px;
+}
+
+/* Classe personalizada para a logo no rodapé */
+.logo-footer-img {
+    margin-top: 10px;
+    transition: transform 0.3s ease;
+}
+
+/* Estilos para desktop */
+@media (min-width: 768px) {
+    .logo-footer-img {
+        max-width: 100px;
+    }
+}
+
+/* Estilo para o ícone do desenvolvedor no rodapé */
+.dev-icon {
+    max-width: 30px; /* Tamanho padrão para o ícone */
+    transition: transform 0.3s ease; /* Efeito de transição suave ao passar o mouse */
+    margin-top: 10px;
+}
+
+.dev-icon:hover {
+    transform: scale(1.2); /* Aumenta o ícone quando o usuário passa o mouse */
+}
+
+/* Estilo da lista para remover o ponto e espaçamentos */
+.list-unstyled-footer {
+    list-style: none; /* Remove os pontos da lista */
+    padding-left: 0;
+    margin-left: 0;
+}
+
+/* Estilo dos links de navegação */
+.footer-link-custom {
+    color: var(--color-primary); /* Cor principal da paleta */
+    text-decoration: none; /* Remove o sublinhado */
+    font-size: 1rem; /* Tamanho da fonte ajustado */
+    font-weight: 600; /* Deixa o texto mais destacado */
+    transition: color 0.3s ease; /* Transição suave ao passar o mouse */
+}
+
+.footer-link-custom:hover {
+    color: var(--color-secondary); /* Muda a cor ao passar o mouse */
+    text-decoration: underline; /* Adiciona sublinhado ao hover */
+}
+
+/* Estilo do título de navegação */
+.footer-heading {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--color-primary); /* Cor principal */
+    margin-bottom: 15px;
+}
 
 /* ================================
    Breakpoints
 ================================ */
 
+/* Estilos para mobile */
+@media (max-width: 767.98px) {
+    .logo-footer-img {
+        max-width: 70px;
+    }
+}
+
+.footer-heading {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--color-white);
+    margin-bottom: 15px;
+}
+
+.footer-link {
+    color: var(--color-white);
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.footer-link:hover {
+    color: var(--color-secondary);
+}
+
+.social-icon {
+    max-width: 40px;
+    margin-top: 15px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+    .footer-description {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    .footer-heading {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .footer-link {
+        font-size: 0.9rem;
+        display: block;
+        text-align: center;
+    }
+
+    .social-icon {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+
 /* Mobile pequeno (até 576px) */
 @media (max-width: 576px) {
+
+    /* Ajuste do título de navegação para versão mobile 
+    .footer-heading {
+        color: var(--color-white);
+        font-size: 1rem; 
+        text-align: center;
+        margin-bottom: 10px;
+    }
+*/
+      /* Ajuste dos links de navegação para versão mobile */
+      .footer-link-custom {
+        font-size: 0.9rem;
+        display: block;
+        text-align: center;
+        padding: 5px 0; /* Reduz o padding vertical */
+        margin-bottom: 10px; /* Ajusta o espaçamento entre os links */
+        color: var(--color-primary); /* Cor de texto de acordo com a paleta */
+    }
+
+       /* Ajusta a lista para ficar centralizada e ocupando a largura total */
+       .list-unstyled-footer {
+        background-color: var(--color-secondary);
+        border-radius: 10px;
+        padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 80%; /* Diminui a largura da lista */
+    }
+
+    .dev-icon {
+        max-width: 20px; /* Tamanho ainda menor para dispositivos móveis */
+    }
+
     /* Estilos para celulares pequenos */
     .texto-cabecalho-quem {
         font-size: 2rem;
@@ -320,6 +484,13 @@ header {
 
 /* Tablets e celulares grandes (até 768px) */
 @media (max-width: 768px) {
+
+
+
+
+    .dev-icon {
+        max-width: 25px; /* Tamanho menor para telas pequenas */
+    }
 
 /*Qume Somos Mobile*/
 
