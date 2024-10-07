@@ -15,6 +15,8 @@ body {
     background-color: var(--color-white); 
     font-family: 'Poppins', Arial, sans-serif;
     padding-top: 100px; /* Ajuste conforme a altura do cabeçalho */
+    font-size: 0.9rem;
+    line-height: 1.6;
 }
 
 /* ================================
@@ -23,10 +25,11 @@ body {
 header {
     background-color: var(--color-primary);
     color: var(--color-white);
+    padding: 10px;
 }
 
 .logo {
-    max-width: 200px; /* Verificar o melhor tamanho ao finalizar projeto */
+    max-width: 150px;
     height: auto;
 }
 
@@ -39,12 +42,10 @@ header {
     color: var(--color-white);
 }
 
-/* Estilo para o banner no desktop */
-.custom-hero-banner {
-    background: url('img/bannerTotalRdu.jpg') no-repeat center center;
+section.custom-hero-banner {
+    background: url('img/bannerApp.jpg') no-repeat center center;
     background-size: cover;
-    height: 115vh; /* Defina uma altura adequada para o desktop */
-    display: block; /* Garante que o banner apareça no desktop */
+    height: 52vh;
 }
 
 /* ================================
@@ -59,10 +60,13 @@ header {
     font-weight: bold;
     cursor: pointer;
     transition: all 0.3s ease;
+    text-align: center;
+    margin-right: 30px; /* Adiciona espaço à direita */
+   
 }
 
 .btnPeca:hover {
-    transform: scale(1.1); /* Efeito de hover */
+    transform: scale(1.1);
 }
 
 /* ================================
@@ -87,36 +91,49 @@ header {
 /* ================================
    Estilos Diversos
 ================================ */
+
+.imgvantagens {
+    max-width: 200px;
+    height: auto;
+}
+
+.txtparceiro {
+    color: var(--color-secondary);
+    font-weight: bold;
+    font-size: medium;
+}
+
 .maistxt {
     font-size: 5rem;
     color: var(--color-secondary);
+    font-weight: bold;
+    text-align: center;
 }
 
-.h2vantagens, .h2beneficios {
+.h2vantagens {
+    font-weight: bold;
     font-size: 2.5rem;
     color: var(--color-primary);
-    font-weight: bold;
+    text-align: center;
 }
 
-.h2credenciada, .txtparceiro {
+.h2beneficios {
+    font-weight: bold;
+    font-size: 2.5rem;
+    color: var(--color-primary);
+    text-align: center;
+}
+
+.h2credenciada {
+    font-weight: bold;
     font-size: 2.5rem;
     color: var(--color-secondary);
-    font-weight: bold;
+    text-align: center;
 }
 
 .vantagens .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-}
-
-.text-content {
-    text-align: justify;
-    font-size: 1rem;
-    line-height: 1.6;
-    color: var(--color-text);
-    padding: 15px;
+    flex-direction: column;
+    text-align: center;
 }
 
 .totaltxt {
@@ -128,64 +145,63 @@ header {
     color: var(--color-secondary);
 }
 
+.text-content {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    padding: 20px;
+    margin: 20px;
+    text-align: justify;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.list-unstyled {
+    text-align: center;
+    font-size: 1.5rem;
+    background-color: var(--color-white);
+    color: var(--color-text);
+    font-weight: bold;
+    line-height: 1.7;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
 /* ================================
    Cartões de Benefícios
 ================================ */
 .benefit-card {
-    position: relative;
     padding: 20px;
     background-color: var(--color-secondary);
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    overflow: hidden; /* Garante que o conteúdo extra fique escondido */
-}
-
-.benefit-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.benefit-card img {
-    max-width: 80px;
-    margin-bottom: 15px;
+    text-align: center;
 }
 
 .benefit-title {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 600;
-    margin-bottom: 10px;
     color: var(--color-primary);
+}
+
+.row.beneficios-content .col-6 {
+    max-width: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: stretch;
+}
+
+.benefit-card img {
+    max-width: 70px;
+    margin-bottom: 15px;
 }
 
 .benefit-text {
     font-size: 1rem;
     color: var(--color-text);
-}
-
-/* Efeito de sobreposição */
-.card-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--color-primary);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    border-radius: 10px;
-}
-
-.card-overlay::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.3);
-    opacity: 1;
-    border-radius: 10px;
+    margin-top: 5px;
 }
 
 /* ================================
@@ -195,33 +211,46 @@ header {
     background: linear-gradient(90deg, #06546f, #4a8190);
 }
 
-.texto-cabecalho-quem {
-    color: var(--color-secondary);
-    padding: 1rem 0; /* Unificação do padding */
-    font-size: 2.5rem;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
 .mvvtxt {
     background-color: var(--color-primary);
-    padding: 1rem 0; /* Unificação do padding */
+    padding: 1rem 0;
     font-size: 2.5rem;
     font-weight: bold;
     text-transform: uppercase;
     color: var(--color-secondary);
     border: 1px solid var(--color-primary);
     border-radius: 10px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-}
-
-.paragrafo-cabecalho-quem, .container {
-    font-size: 1.2rem;
-    color: var(--color-primary);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .mvvp {
     color: var(--color-white);
+    text-align: justify;
+    font-size: 1rem;
+
+}
+
+.texto-cabecalho-quem {
+    color: var(--color-secondary);
+    padding: 1rem 0;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.paragrafo-cabecalho-quem {
+    font-size: 1.2rem;
+    color: var(--color-text);
+}
+
+.imgsesc {
+    max-width: 150px;
+    height: auto;
+}
+
+/* img download app */
+.imgapple, .imggoogle {
+    padding: 10px;
 }
 
 /* ================================
@@ -239,439 +268,259 @@ header {
 
 .footer-description {
     font-size: 1rem;
-    color: var(--color-white); /* Manter consistência com o footer */
+    margin-top: 10px;
+    color: var(--color-white);
+}
+
+.logo-footer-img {
+    max-width: 70px;
     margin-top: 10px;
 }
 
-/* Classe personalizada para a logo no rodapé */
-.logo-footer-img {
+.dev-icon {
+    max-width: 30px;
     margin-top: 10px;
     transition: transform 0.3s ease;
 }
 
-/* Estilos para desktop */
-@media (min-width: 768px) {
-    .logo-footer-img {
-        max-width: 100px;
-    }
-}
-
-/* Estilo para o ícone do desenvolvedor no rodapé */
-.dev-icon {
-    max-width: 30px; /* Tamanho padrão para o ícone */
-    transition: transform 0.3s ease; /* Efeito de transição suave ao passar o mouse */
-    margin-top: 10px;
-}
-
-.dev-icon:hover {
-    transform: scale(1.2); /* Aumenta o ícone quando o usuário passa o mouse */
-}
-
-/* Estilo da lista para remover o ponto e espaçamentos */
-.list-unstyled-footer {
-    list-style: none; /* Remove os pontos da lista */
-    padding-left: 0;
-    margin-left: 0;
-}
-
-/* Estilo dos links de navegação */
-.footer-link-custom {
-    color: var(--color-primary); /* Cor principal da paleta */
-    text-decoration: none; /* Remove o sublinhado */
-    font-size: 1rem; /* Tamanho da fonte ajustado */
-    font-weight: 600; /* Deixa o texto mais destacado */
-    transition: color 0.3s ease; /* Transição suave ao passar o mouse */
-}
-
-.footer-link-custom:hover {
-    color: var(--color-secondary); /* Muda a cor ao passar o mouse */
-    text-decoration: underline; /* Adiciona sublinhado ao hover */
-}
-
-/* Estilo do título de navegação */
 .footer-heading {
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: bold;
-    color: var(--color-primary); /* Cor principal */
+    color: var(--color-secondary);
     margin-bottom: 15px;
 }
 
+.footer-heading-copy {
+    font-size: 0.5rem;
+    font-weight: bold;
+    color: var(--color-secondary);
+    margin-bottom: 15px;
+}
+
+.footer-link {
+    color: var(--color-white);
+    font-size: 0.9rem;
+    display: block;
+    text-align: center;
+}
+
+.social-icon {
+    max-width: 40px;
+    margin-top: 15px;
+    transition: transform 0.3s ease;
+}
 
 /* ================================
-   Breakpoints
+   Hero Section Text Styles
 ================================ */
-
-/* Estilos para mobile */
-@media (max-width: 768px) {
-
-    /* Logo do rodapé */
-    .logo-footer-img {
-        max-width: 70px;
-    }
-
-    /* Descrição do rodapé */
-    .footer-description {
-        font-size: 0.9rem;
-        text-align: center;
-    }
-
-    /* Título do rodapé */
-    .footer-heading {
-        font-size: 1rem;
-        font-weight: bold;
-        color: var(--color-white);
-        margin-bottom: 15px;
-        text-align: center;
-    }
-
-    /* Links do rodapé */
-    .footer-link {
-        color: var(--color-white);
-        text-decoration: none;
-        font-size: 0.9rem;
-        display: block;
-        text-align: center;
-    }
-
-    .footer-link:hover {
-        color: var(--color-secondary);
-    }
-
-    /* Ícones sociais */
-    .social-icon {
-        max-width: 40px;
-        margin-top: 15px;
-        margin-left: auto;
-        margin-right: auto;
-        transition: transform 0.3s ease;
-    }
-
-    .social-icon:hover {
-        transform: scale(1.2);
-    }
-}
-
-
-/* Mobile pequeno (até 576px) */
-@media (max-width: 576px) {
-
-    /*Comentados para ser usados no futuro*/
-            /* Ajuste do título de navegação para versão mobile 
-            .footer-heading {
-                color: var(--color-white);
-                font-size: 1rem; 
-                text-align: center;
-                margin-bottom: 10px;
-            }
-        */
-            /* Ajuste dos links de navegação para versão mobile 
-            .footer-link-custom {
-                font-size: 0.9rem;
-                display: block;
-                text-align: center;
-                padding: 5px 0; 
-                margin-bottom: 10px; 
-                color: var(--color-primary);
-            }*/
-
-            /* Ajusta a lista para ficar centralizada e ocupando a largura total 
-            .list-unstyled-footer {
-                background-color: var(--color-secondary);
-                border-radius: 10px;
-                padding-left: 0;
-            padding-right: 0;
-            margin-left: auto;
-            margin-right: auto;
-            max-width: 80%; 
-            }*/
-
-    .dev-icon {
-        max-width: 20px; /* Tamanho ainda menor para dispositivos móveis */
-    }
-
-    /* Estilos para celulares pequenos */
-    .texto-cabecalho-quem {
-        font-size: 2rem;
-    }
-
-    .maistxt {
-        font-size: 3rem;
-    }
-
-    .beneficios-content {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: stretch; /* Garante que todos os cartões tenham a mesma altura */
-    }
-
-    .benefit-card {
-        display: flex;
-        flex-direction: column; /* Garante que o conteúdo interno fique em coluna */
-        justify-content: space-between; /* Distribui o conteúdo interno */
-        flex-grow: 1; /* Permite que os cartões cresçam igualmente */
-        padding: 15px;
-        margin-bottom: 20px;
-        background-color: var(--color-secondary);
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        max-width: 90%; /* Mantém o tamanho responsivo no mobile */
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .benefit-card img {
-        max-width: 60px; /* Ajuste do tamanho do ícone no mobile */
-        margin-bottom: 15px;
-        align-self: center;
-    }
-
-    .benefit-title {
-        font-size: 1.1rem;
-        font-weight: 600;
-        color: var(--color-primary);
-        text-align: center;
-    }
-
-    .benefit-text {
-        font-size: 0.9rem;
-        color: var(--color-text);
-        text-align: center;
-        margin-top: 5px;
-    }
-
-    .list-unstyled {
-        text-align: center;
-        font-size: 1.5rem;
-        background-color: var(--color-secondary);
-        color: var(--color-text); /* testar outras cores no texto */
-        font-weight: bold;
-        line-height: 1.7;
-        padding: 20px;
-        margin: 20px;
-        border-radius: 8px;
-        box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .imgvantagens {
-        max-width: 200px; /* Verificar o melhor tamanho ao finalizar projeto */
-        height: auto;
-    }
-
-    .imgsesc {
-        max-width: 250px;
-    }
-}
-
-/* Tablets e celulares grandes (até 768px) */
-@media (max-width: 768px) {
-
-
-
-
-    .dev-icon {
-        max-width: 25px; /* Tamanho menor para telas pequenas */
-    }
-
-/*Qume Somos Mobile*/
-
-.mvvtxt{
-    background-color: var(--color-primary);
-    padding: 1rem 0rem 1rem 0;
-    font-size: 2.5rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: var(--color-secondary);
-    border: 1px solid var(--color-primary);
-    border-radius: 10px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-    
-}
-
-.mvvp{
-  color: var(--color-white);
-  text-align: justify;
-}
-
-
-
-        .vantagens .container {
-            flex-direction: column;
-            text-align: center;
-        }
-    
-        .shadow-custom {
-            margin-bottom: 10px;
-        }
-    
-        .text-content {
-            padding: 10px;
-        }
-
-.heroh2, .heroh5{
+.heroh2, .heroh5 {
+    text-align: center;
     font-size: 2.5rem;
     color: var(--color-primary);
     font-weight: bold;
-    text-align: center;
 }
 
-.heroh4{
-    font-size: 1.5rem;
+.heroh4 {
+    text-align: center;
+    font-size: 1.2rem;
     color: var(--color-primary);
     font-weight: bold;
-    text-align: center;
 }
 
-.herotxt, .listahero{
+.herotxt, .listahero {
     font-size: 16px;
     line-height: 1.7;
     padding: 20px;
     margin: 20px;
     text-align: justify;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-/* img downoad app */
-
-.imgapple, .imggoogle{
-    padding: 10px;
-}
-
-.hero1{
-    background-color: var(--color-white);
-}
-
-
-/******* corrigir arquivos para versao bolibe do app*****/
-
-
-
-    
-    /* Ajustes para o botão "Pedir Agora" */
-    .btm {
-        padding-right: 30px;
+/* ================================
+   Para telas menores que 576px
+   (Smartphones pequenos)
+================================ */
+@media (max-width: 576px) {
+    body {
+        font-size: 0.8rem; /* Reduzindo o tamanho da fonte para melhor visualização */
+        padding-top: 80px; /* Ajustando o padding superior */
     }
 
-    /* Ajustes para o banner hero na versão mobile */
-    section.custom-hero-banner {
-        background: url('img/bannerApp.jpg') no-repeat center center;
-        background-size: cover;
-        background-position: center;
-        height: 52vh;
+    .hero {
+        padding: 5px 0;
     }
 
-    .row.beneficios-content .col-6 {
-        max-width: 50%;
-        padding: 10px;
-        display: flex;
-        align-items: stretch; /* Garante que todos os cartões tenham a mesma altura */
+    .btnPeca {
+        padding: 8px 15px; /* Diminuindo o padding do botão */
+    }
+
+    .imgvantagens, .imgsesc {
+        max-width: 150px; /* Diminuindo as imagens em dispositivos menores */
+    }
+
+    .maistxt {
+        font-size: 3.5rem; /* Reduzindo o tamanho da fonte para o título grande */
+    }
+
+    .h2vantagens, .h2beneficios, .h2credenciada {
+        font-size: 1.8rem; /* Reduzindo tamanho dos títulos */
     }
 
     .benefit-card {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between; /* Distribui o conteúdo interno */
-        flex-grow: 1; /* Garante que os cartões cresçam igualmente */
-        padding: 20px;
-        margin-bottom: 30px;
-        background-color: var(--color-secondary);
-        border-radius: 10px;
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-        max-width: 95%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .benefit-card img {
-        max-width: 70px; /* Tamanho dos ícones para tablets */
-        margin-bottom: 15px;
-        align-self: center;
+        padding: 15px; /* Reduzindo padding dos cartões */
     }
 
     .benefit-title {
-        font-size: 1.2rem;
-        font-weight: 600;
-        color: var(--color-primary);
-        text-align: center;
+        font-size: 1rem; /* Ajustando fonte dos títulos dos cartões */
     }
 
-    .benefit-text {
-        font-size: 1rem;
-        color: var(--color-text);
-        text-align: center;
-        margin-top: 5px;
+    .footer {
+        padding: 30px 0; /* Ajustando o padding do rodapé */
     }
 
-    .h2vantagens, .h2beneficios, .maistxt {
-        padding: 2rem 0;
+    .footer-heading {
+        font-size: 0.9rem; /* Diminuindo tamanho dos títulos no rodapé */
     }
 
-    .text-content {
-        font-size: 16px;
-        line-height: 1.7;
-        padding: 20px;
-        margin: 20px;
-        text-align: justify;
-        border-radius: 8px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    .footer-link {
+        font-size: 0.8rem; /* Reduzindo o tamanho dos links no rodapé */
     }
 
-    .text-content p {
-        margin-bottom: 1.5em;
+    .heroh2, .heroh5 {
+        font-size: 2rem; /* Ajustando tamanho dos textos grandes da seção hero */
     }
 
-    .missao-visao-valores .row {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .missao-visao-valores .col-md-4 {
-        margin-bottom: 30px;
-        width: 80%;
+    .heroh4 {
+        font-size: 1rem; /* Ajustando tamanho do texto menor da seção hero */
     }
 }
 
-/* Tablets em modo paisagem / Telas médias (até 992px) */
-@media (max-width: 992px) {
-    /* Ajustes para tablets em modo paisagem e laptops menores */
-    .texto-cabecalho-quem {
-        font-size: 2.2rem;
+/* ================================
+   Para telas menores que 480px
+   (Smartphones muito pequenos)
+================================ */
+@media (max-width: 480px) {
+    body {
+        font-size: 0.75rem; /* Diminuindo mais o tamanho da fonte */
+        padding-top: 70px; /* Ajuste do padding superior */
+    }
+
+    .logo {
+        max-width: 100px; /* Reduzindo o tamanho do logo */
+    }
+
+    .btnPeca {
+        padding: 8px 10px; /* Ajuste no padding para encaixar melhor em telas muito pequenas */
+    }
+
+    .imgvantagens, .imgsesc {
+        max-width: 120px; /* Ajustando imagens para se adaptar às telas pequenas */
+    }
+
+    .maistxt {
+        font-size: 3rem; /* Reduzindo ainda mais o título grande */
+    }
+
+    .h2vantagens, .h2beneficios, .h2credenciada {
+        font-size: 1.5rem; /* Reduzindo tamanho dos títulos */
     }
 
     .benefit-card {
-        margin-bottom: 25px;
+        padding: 10px; /* Diminuindo o padding dos cartões */
     }
 
-    .missao-visao-valores {
-        padding: 40px 0;
+    .benefit-title {
+        font-size: 0.9rem; /* Reduzindo mais o tamanho do título dos cartões */
+    }
+
+    .text-content, .list-unstyled {
+        padding: 15px; /* Reduzindo o padding do texto e listas */
+        margin: 10px; /* Reduzindo as margens */
+    }
+
+    .footer {
+        padding: 20px 0; /* Reduzindo o padding do rodapé */
+    }
+
+    .footer-heading {
+        font-size: 0.8rem; /* Diminuindo o tamanho dos títulos do rodapé */
+    }
+
+    .footer-link {
+        font-size: 0.7rem; /* Reduzindo ainda mais o tamanho dos links */
+    }
+
+    .heroh2, .heroh5 {
+        font-size: 1.8rem; /* Reduzindo o tamanho dos textos grandes */
+    }
+
+    .heroh4 {
+        font-size: 0.9rem; /* Ajustando o tamanho do texto menor */
     }
 }
 
-/* Desktops (até 1200px) */
-@media (max-width: 1200px) {
-    /* Ajustes para desktops e laptops maiores */
-    .texto-cabecalho-quem {
-        font-size: 2.4rem;
+/* ================================
+   Para telas menores que 360px
+   (Smartphones compactos)
+================================ */
+@media (max-width: 360px) {
+    body {
+        font-size: 0.7rem; /* Tamanho de fonte menor para smartphones muito pequenos */
+        padding-top: 60px;
+    }
+
+    .logo {
+        max-width: 90px; /* Reduzindo ainda mais o tamanho do logo */
+    }
+
+    .btnPeca {
+        padding: 5px 10px; /* Diminuindo padding do botão */
+    }
+
+    .imgvantagens, .imgsesc {
+        max-width: 100px; /* Reduzindo o tamanho das imagens */
+    }
+
+    .maistxt {
+        font-size: 2.5rem; /* Reduzindo o título */
+    }
+
+    .h2vantagens, .h2beneficios, .h2credenciada {
+        font-size: 1.3rem; /* Ajustando os títulos */
     }
 
     .benefit-card {
-        margin-bottom: 28px;
+        padding: 8px; /* Reduzindo ainda mais o padding dos cartões */
     }
 
-    .missao-visao-valores {
-        padding: 50px 0;
+    .benefit-title {
+        font-size: 0.8rem; /* Ajustando título dos cartões */
+    }
+
+    .text-content, .list-unstyled {
+        padding: 10px; /* Diminuindo padding dos textos */
+        margin: 5px; /* Ajustando margens */
+    }
+
+    .footer {
+        padding: 15px 0; /* Reduzindo padding do rodapé */
+    }
+
+    .footer-heading {
+        font-size: 0.7rem; /* Tamanho menor para o rodapé */
+    }
+
+    .footer-link {
+        font-size: 0.6rem; /* Ajustando tamanho dos links */
+    }
+
+    .heroh2, .heroh5 {
+        font-size: 1.5rem; /* Reduzindo o tamanho dos textos grandes */
+    }
+
+    .heroh4 {
+        font-size: 0.8rem; /* Ajuste no texto menor */
     }
 }
 
-/* Desktops grandes (acima de 1200px) */
-@media (min-width: 1200px) {
-    /* Ajustes para telas grandes */
-    .texto-cabecalho-quem {
-        font-size: 2.6rem;
-    }
-
-    .benefit-card {
-        margin-bottom: 30px;
-    }
-}

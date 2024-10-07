@@ -1,0 +1,378 @@
+/* ================================
+   Cores Personalizadas
+================================ */
+:root {
+    --color-primary: #06546f;
+    --color-secondary: #EAE932;
+    --color-white: #F1F1F1;
+    --color-text: #333333;
+}
+
+/* ================================
+   Estilo Geral
+================================ */
+body {
+    background-color: var(--color-white); 
+    font-family: 'Poppins', Arial, sans-serif;
+    padding-top: 100px; /* Ajuste conforme a altura do cabeçalho */
+}
+
+/* ================================
+   Cabeçalho e Logo
+================================ */
+header {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.logo {
+    max-width: 150px;
+    height: auto;
+}
+
+/* ================================
+   Seção Hero / Texto do Cabeçalho
+================================ */
+.hero {
+    padding: 10px 0;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+section.custom-hero-banner {
+    background: url('img/bannerApp.jpg') no-repeat center center;
+    background-size: cover;
+    background-position: center;
+    height: 52vh;
+}
+
+/* ================================
+   Botão "Pedir Agora"
+================================ */
+.btm {
+    
+    padding-right: 30px;
+}
+
+.btnPeca {
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btnPeca:hover {
+    transform: scale(1.1); /* Efeito de hover */
+}
+
+/* ================================
+   Efeito Pulsar para o Botão
+================================ */
+.pulsating-button {
+    animation: pulsate 1.5s infinite;
+}
+
+@keyframes pulsate {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* ================================
+   Estilos Diversos
+================================ */
+
+.imgvantagens {
+    max-width: 200px; /* Verificar o melhor tamanho ao finalizar projeto */
+    height: auto;
+    
+}
+
+.txtparceiro{
+    color: var(--color-secondary);
+    font-weight: bold;
+    font-size: medium;
+}
+
+.maistxt, .h2vantagens, .h2beneficios, .h2credenciada {
+    font-weight: bold;
+    text-align: center;
+}
+
+.maistxt {
+    font-size: 5rem;
+    color: var(--color-secondary);
+}
+
+.h2vantagens, .h2beneficios {
+    font-size: 2.5rem;
+    color: var(--color-primary);
+}
+
+.h2credenciada {
+    font-size: 2.5rem;
+    color: var(--color-secondary);
+}
+
+.vantagens .container {
+    flex-direction: column;
+    text-align: center;
+}
+
+.totaltxt {
+    color: var(--color-primary);
+}
+
+.credenciados {
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+}
+
+.text-content {
+    font-size: 16px;
+    line-height: 1.7;
+    padding: 20px;
+    margin: 20px;
+    text-align: justify;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Ajuste a opacidade e o desfoque conforme necessário */
+}
+
+.text-content p {
+    margin-bottom: 1.5em;
+}
+
+.list-unstyled {
+    text-align:center;
+    font-size: 1.5rem;
+    background-color: var(--color-white);
+    color: var(--color-text);
+    font-weight: bold;
+    line-height: 1.7;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Ajuste a opacidade e o desfoque conforme necessário */
+}
+
+/* ================================
+   Cartões de Benefícios
+================================ */
+.benefit-card {
+    position: relative;
+    padding: 20px;
+    background-color: var(--color-secondary);
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Ajuste a opacidade e o desfoque conforme necessário */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden; /* Garante que o conteúdo extra fique escondido */
+}
+
+.benefit-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    text-align: center;
+}
+
+.row.beneficios-content .col-6 {
+    max-width: 50%;
+    padding: 10px;
+    display: flex;
+    align-items: stretch; /* Garante que todos os cartões tenham a mesma altura */
+}
+
+.benefit-card img {
+    max-width: 70px; /* Tamanho dos ícones para tablets */
+    margin-bottom: 15px;
+    align-self: center;
+}
+
+.benefit-text {
+    font-size: 1rem;
+    color: var(--color-text);
+    text-align: center;
+    margin-top: 5px;
+}
+
+/* ================================
+   Seção Missão, Visão e Valores
+================================ */
+.quem-somos {
+    background: linear-gradient(90deg, #06546f, #4a8190);
+}
+
+
+.mvvtxt {
+    background-color: var(--color-primary);
+    padding: 1rem 0rem 1rem 0;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--color-secondary);
+    border: 1px solid var(--color-primary);
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Ajuste a opacidade e o desfoque conforme necessário */
+    
+}
+
+.mvvp{
+    color: var(--color-white);
+    text-align: justify;
+  }
+
+.texto-cabecalho-quem {
+    color: var(--color-secondary);
+    padding: 1rem 0; /* Unificação do padding */
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.paragrafo-cabecalho-quem, .container {
+    font-size: 1.2rem;
+    color: var(--color-text);
+}
+
+.imgsesc {
+    max-width: 150px;
+    
+
+}
+
+
+/* img downoad app */
+
+.imgapple, .imggoogle{
+    padding: 10px;
+    
+}
+
+.hero1{
+    background-color: var(--color-white);
+}
+
+/* ================================
+   Footer
+================================ */
+.footer {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 40px 0;
+}
+
+.footer .logo-footer {
+    max-width: 150px;
+}
+
+.footer-description {
+    font-size: 1rem;
+    margin-top: 10px;
+    color: var(--color-white);
+}
+
+.logo-footer-img {
+    max-width: 70px;
+    margin-top: 10px;
+}
+
+.dev-icon {
+    max-width: 30px;
+    margin-top: 10px;
+    transition: transform 0.3s ease;
+}
+
+.footer-heading {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--color-white);
+    margin-bottom: 15px;
+}
+
+.footer-link {
+    color: var(--color-white);
+    font-size: 0.9rem;
+    display: block;
+    text-align: center;
+}
+
+.social-icon {
+    max-width: 40px;
+    margin-top: 15px;
+    transition: transform 0.3s ease;
+}
+
+/* ================================
+   Hero Section Text Styles
+================================ */
+.heroh2, .heroh5 {
+    font-size: 2.5rem;
+    color: var(--color-primary);
+    font-weight: bold;
+}
+
+.heroh4 {
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    font-weight: bold;
+}
+
+.herotxt, .listahero {
+    font-size: 16px;
+    line-height: 1.7;
+    padding: 20px;
+    margin: 20px;
+    text-align: justify;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Ajuste a opacidade e o desfoque conforme necessário */
+}
+
+/* ================================
+   Media Queries (Desktop)
+================================ */
+@media (min-width: 768px) {
+
+    .hero {
+        padding: 20px 0;
+    }
+
+    .benefit-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Ajuste a opacidade e o desfoque conforme necessário */
+    }
+
+    section.custom-hero-banner {
+        background: url('img/bannerTotalRdu.jpg') no-repeat center center;
+        background-size: cover;
+        height: 115vh;
+    }
+
+    .row.beneficios-content .col-6 {
+        max-width: 50%;
+        padding: 10px;
+    }
+
+    .benefit-card img {
+        max-width: 70px;
+        margin-bottom: 15px;
+    }
+
+    .missao-visao-valores .row {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .missao-visao-valores .col-md-4 {
+        width: 30%;
+    }
+}
