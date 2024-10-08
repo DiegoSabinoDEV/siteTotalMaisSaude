@@ -110,11 +110,27 @@ section.custom-hero-banner {
     text-align: center;
 }
 
+
+
+/* Estilos globais (modo retrato e padrão) */
 .h2vantagens {
-    font-weight: bold;
-    font-size: 2.5rem;
-    color: var(--color-primary);
     text-align: center;
+    font-size: 2.5rem; /* Ajuste o tamanho conforme necessário */
+    margin-bottom: 20px;
+}
+
+.vantagens .row {
+    display: flex;
+    flex-direction: column; /* Empilha no modo retrato */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+
+.vantagens img {
+    margin-bottom: 20px; /* Espaço abaixo da imagem no modo retrato */
 }
 
 .h2beneficios {
@@ -343,11 +359,111 @@ section.custom-hero-banner {
     margin: 0 auto;
 }
 
+/* Estilização para a orientação paisagem (deitado) em dispositivos móveis e tablets */
+@media (min-width: 768px) and (max-width: 1280px) and (max-height: 800px) {
+    /* Ajustes para o banner */
+    section.custom-hero-banner {
+        background: url('img/bannerTotalRdu.jpg') no-repeat center center;
+        background-size: cover;
+        width: auto;
+        height: 480px;
+    }
+
+    /* Ajustes para a seção Vantagens no modo paisagem */
+    .vantagens .row {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+    }
+
+    .vantagens .col-md-6 {
+        flex: 1;
+    }
+
+    .vantagens .text-content {
+        max-width: 500px;
+        margin-left: 20px;
+        text-align: left;
+    }
+
+    .vantagens img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 0;
+    }
+
+    /* Ajustes para a seção credenciados no modo paisagem */
+    .credenciados .row {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
+
+    .credenciados .col-md-6 {
+        flex: 1;
+    }
+
+    .txtparceiro, .imgsesc {
+        text-align: left;
+        margin-left: 20px;
+    }
+
+    .list-unstyled {
+        margin-left: 20px;
+    }
+}
+
+/* Estilização específica para tablets em modo retrato (em pé) */
+@media (min-width: 600px) and (max-width: 767px) {
+    .vantagens .row {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .vantagens img {
+        margin-bottom: 20px;
+    }
+
+    .vantagens .text-content {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+}
+
+/* Ajustes específicos para dispositivos menores, como iPhone SE */
+@media (max-width: 768px) {
+    section.custom-hero-banner {
+        background: url('img/bannerApp.jpg') no-repeat center center;
+        background-size: cover;
+        width: auto;
+        height: 480px;
+    }
+    
+    
+}
+
+/* Media Query específica para resoluções de iPhones e dispositivos similares */
+@media (min-width: 600px) and (max-width: 768px) {
+    section.custom-hero-banner {
+        background: url('img/bannerTotalRdu.jpg') no-repeat center center;
+        background-size: cover; /* Ajuste dependendo da imagem */
+        height: 400px; /* Ajuste conforme necessário */
+    }
+ 
+}
+
+
 /* ================================
    Para telas menores que 576px
    (Smartphones pequenos)
 ================================ */
 @media (max-width: 576px) {
+
+   
+
     body {
         font-size: 0.8rem; /* Reduzindo o tamanho da fonte para melhor visualização */
         padding-top: 80px; /* Ajustando o padding superior */
@@ -407,6 +523,9 @@ section.custom-hero-banner {
    (Smartphones muito pequenos)
 ================================ */
 @media (max-width: 480px) {
+
+    
+
     body {
         font-size: 0.75rem; /* Diminuindo mais o tamanho da fonte */
         padding-top: 70px; /* Ajuste do padding superior */
@@ -471,6 +590,8 @@ section.custom-hero-banner {
    (Smartphones compactos)
 ================================ */
 @media (max-width: 360px) {
+
+
     body {
         font-size: 0.7rem; /* Tamanho de fonte menor para smartphones muito pequenos */
         padding-top: 60px;
