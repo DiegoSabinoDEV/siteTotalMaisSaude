@@ -651,3 +651,86 @@ section.custom-hero-banner {
     }
 }
 
+/* Estilização para telas grandes (desktops) */
+@media (min-width: 1024px) {
+
+    .logo {
+        max-width: 200px;
+        height: auto;
+    }
+
+    .footer .logo-footer {
+        max-width: 250px;
+    }
+    
+    .footer-description {
+        text-align: left;
+    }
+
+    /* img download app */
+.imgapple, .imggoogle {
+    padding: 20px;
+    max-width: 200px;
+}
+
+    /* Estilizando o texto "Vantagens" */
+    .h2vantagens, .h2beneficios {
+    color: #06546f; /* Cor personalizada para o texto "Vantagens" */
+    font-size: 2.5rem; /* Ajusta o tamanho do texto */
+    font-weight: bold; /* Deixa o texto em negrito */
+}
+
+
+    /* Ajustes gerais para o layout em telas grandes */
+    body {
+        font-size: 22px; /* Ajuste da fonte para telas maiores */
+    }
+
+    /* Seção do banner no desktop */
+    section.custom-hero-banner {
+        background: url('img/bannerTotalRdu.jpg') no-repeat center center;
+        background-size: cover; /* Preenche a tela sem cortar a imagem */
+        height: 950px; /* Ajuste a altura conforme necessário para o desktop */
+    }
+
+    /* Ajustes para a seção Vantagens */
+    .vantagens .row {
+        flex-direction: row; /* Lado a lado no desktop */
+        justify-content: space-between; /* Espaçamento adequado */
+        align-items: center;
+    }
+
+    .vantagens .col-md-6 {
+        flex: 1; /* Divisão das colunas igualitária */
+    }
+
+    .vantagens .text-content {
+        max-width: 700px; /* Aumenta a largura do texto para telas maiores */
+        margin-left: 30px; /* Ajuste do espaçamento */
+    }
+
+    .vantagens img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Ajustes para a seção Credenciados */
+    .credenciados .row {
+        flex-direction: row; /* Layout lado a lado */
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+    }
+
+    .credenciados .col-md-6 {
+        flex: 1;
+    }
+
+    .txtparceiro, .imgsesc {
+        margin-left: 30px;
+    }
+
+    .list-unstyled {
+        margin-left: 30px;
+    }
+}
