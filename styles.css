@@ -335,6 +335,12 @@ section.custom-hero-banner {
     text-align: justify;
     border-radius: 8px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    list-style-type: none;
+}
+
+.maoApp{
+    max-width: 300px;
+    margin: 0 auto;
 }
 
 /* ================================
