@@ -42,11 +42,7 @@ header {
     color: var(--color-white);
 }
 
-section.custom-hero-banner {
-    background: url('img/bannerApp.jpg') no-repeat center center;
-    background-size: cover;
-    height: 52vh;
-}
+
 
 /* ================================
    Botão "Pedir Agora"
@@ -652,6 +648,8 @@ section.custom-hero-banner {
 }
 
 /* Estilização para telas grandes (desktops) */
+
+/* Estilização para telas grandes (maiores que 1024px) */
 @media (min-width: 1024px) {
 
     .logo {
@@ -668,18 +666,17 @@ section.custom-hero-banner {
     }
 
     /* img download app */
-.imgapple, .imggoogle {
-    padding: 20px;
-    max-width: 200px;
-}
+    .imgapple, .imggoogle {
+        padding: 20px;
+        max-width: 200px;
+    }
 
     /* Estilizando o texto "Vantagens" */
     .h2vantagens, .h2beneficios {
-    color: #06546f; /* Cor personalizada para o texto "Vantagens" */
-    font-size: 2.5rem; /* Ajusta o tamanho do texto */
-    font-weight: bold; /* Deixa o texto em negrito */
-}
-
+        color: #06546f; /* Cor personalizada para o texto "Vantagens" */
+        font-size: 2.5rem; /* Ajusta o tamanho do texto */
+        font-weight: bold; /* Deixa o texto em negrito */
+    }
 
     /* Ajustes gerais para o layout em telas grandes */
     body {
@@ -698,6 +695,11 @@ section.custom-hero-banner {
         flex-direction: row; /* Lado a lado no desktop */
         justify-content: space-between; /* Espaçamento adequado */
         align-items: center;
+    }
+
+    .benefit-card:hover {
+        transform: scale(1.05); /* Aumenta o tamanho ao passar o mouse */
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Sombra mais intensa */
     }
 
     .vantagens .col-md-6 {
@@ -734,3 +736,25 @@ section.custom-hero-banner {
         margin-left: 30px;
     }
 }
+
+/* Estilização para telas de 1024px ou menores (paisagem ou wide) */
+@media (max-width: 1024px) and (orientation: landscape) {
+
+    /* Seção do banner em telas mais largas (ex: tablets em paisagem) */
+    section.custom-hero-banner {
+        background: url('img/bannerApp.jpg') no-repeat center center;
+        background-size: cover;
+        height: 950px; /* Ajuste a altura conforme necessário */
+    }
+}
+
+/* Estilização para telas de 768px ou menores (mobile padrão) */
+@media (max-width: 768px) {
+
+    section.custom-hero-banner {
+        background: url('img/bannerApp.jpg') no-repeat center center;
+        background-size: cover;
+        height: 52vh;
+    }
+}
+
