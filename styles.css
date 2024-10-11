@@ -108,11 +108,11 @@ header {
 
 
 
-/* Estilos globais (modo retrato e padrão) */
-.h2vantagens {
-    text-align: center;
-    font-size: 2.5rem; /* Ajuste o tamanho conforme necessário */
-    margin-bottom: 20px;
+  /* Estilizando o texto "Vantagens" */
+  .h2vantagens, .h2beneficios {
+    color: #06546f; /* Cor personalizada para o texto "Vantagens" */
+    font-size: 2.5rem; /* Ajusta o tamanho do texto */
+    font-weight: bold; /* Deixa o texto em negrito */
 }
 
 .vantagens .row {
